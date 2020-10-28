@@ -29,4 +29,13 @@
 	// Scrolly.
 		$('.scrolly').scrolly();
 
+	//// filtering
+
+	$('[data-target]').on('click',function(e){
+		e.preventDefault()
+		var target = $(this).data('target')
+		$('.grid .grid-item').hide()
+		$('.grid '+target).show()
+	})
+
 })(jQuery);
